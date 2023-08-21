@@ -1748,7 +1748,7 @@
     (property "Value" "26MHz" (at 114.3 157.48 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Crystal:Crystal_SMD_0603-4Pin_6.0x3.5mm" (at 110.49 153.67 0)
+    (property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" (at 110.49 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 110.49 153.67 0)
