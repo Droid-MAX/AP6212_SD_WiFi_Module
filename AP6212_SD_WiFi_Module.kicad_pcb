@@ -954,7 +954,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tstamp e256a75e-8cce-46ef-9e0f-6e454206a72c)
-    (at 203.97 123.985 -90)
+    (at 203.97 125.535 90)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "AP6212_SD_WiFi_Module.kicad_sch")
@@ -995,9 +995,9 @@
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 8716f6d9-1b5f-4dc6-95ea-60d7ba7dafe8))
     (fp_line (start 0.8 0.4) (end -0.8 0.4)
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 6e59c4e1-6f7e-497d-bba4-fbe35adc4652))
-    (pad "1" smd roundrect (at -0.775 0 270) (size 0.9 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
+    (pad "1" smd roundrect (at -0.775 0 90) (size 0.9 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 10 "GND") (pintype "passive") (tstamp 63ba33aa-3e9c-4532-a80a-ee3daf0e0f8b))
-    (pad "2" smd roundrect (at 0.775 0 270) (size 0.9 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
+    (pad "2" smd roundrect (at 0.775 0 90) (size 0.9 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 25 "Net-(U1-XTAL_OUT)") (pintype "passive") (tstamp 9fa42479-0661-40b2-95ef-f3c26e02c647))
     (model "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl"
       (offset (xyz 0 0 0))
@@ -1496,6 +1496,7 @@
   (via (at 219.6695 129.239) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp befa71ef-8254-40f3-8df2-40bf0929622f))
   (via (at 216.417 114.739) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp c060574d-b59c-44a0-ab85-d40f52a0e9d3))
   (via (at 218.373 110.098) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp c0eb629e-ffa1-473a-a464-393388f1e7b0))
+  (via (at 203.96 123.12) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp c4f063cd-5c67-4f69-9ec5-5ead596dddc2))
   (via (at 199.845 109.301) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp c9c0b547-5d53-405d-8b85-797723f6cc50))
   (via (at 205.25 123.62) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp cca02fa4-8d59-42e3-b7ae-af18c96e1e02))
   (via (at 213.0315 118.584) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 10) (tstamp ccaf8c5b-9a08-4ecb-939a-66361d6ea04f))
