@@ -138,7 +138,7 @@
           "td_on_pad_in_zone": false,
           "td_onpadsmd": true,
           "td_onroundshapesonly": false,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onviapad": true
         }
       ],
@@ -179,9 +179,8 @@
         0.35,
         0.4,
         0.45,
-        0.5,
-        1.0,
-        2.0
+        0.75,
+        0.8
       ],
       "via_dimensions": [
         {
