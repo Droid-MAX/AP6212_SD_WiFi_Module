@@ -536,6 +536,57 @@
         )
       )
     )
+    (symbol "Device:C_Small" (pin_numbers hide) (pin_names (offset 0.254) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.254 1.778 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "C_Small" (at 0.254 -2.032 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "capacitor cap" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Unpolarized capacitor, small symbol" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "C_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "C_Small_0_1"
+        (polyline
+          (pts
+            (xy -1.524 -0.508)
+            (xy 1.524 -0.508)
+          )
+          (stroke (width 0.3302) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.524 0.508)
+            (xy 1.524 0.508)
+          )
+          (stroke (width 0.3048) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "C_Small_1_1"
+        (pin passive line (at 0 2.54 270) (length 2.032)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -2.54 90) (length 2.032)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Device:Crystal_GND24" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "Y" (at 3.175 5.08 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -941,6 +992,9 @@
   (junction (at 185.42 166.37) (diameter 0) (color 0 0 0 0)
     (uuid 4e814555-9dd1-4ca9-bc93-3abda682aaae)
   )
+  (junction (at 132.08 127) (diameter 0) (color 0 0 0 0)
+    (uuid 7399ed80-b0e3-4fd0-8669-75f5920f293d)
+  )
   (junction (at 160.02 171.45) (diameter 0) (color 0 0 0 0)
     (uuid 90acb0c5-a2c3-43e0-9588-7d0eefeb3798)
   )
@@ -993,6 +1047,10 @@
   (wire (pts (xy 140.97 144.78) (xy 144.78 144.78))
     (stroke (width 0) (type default))
     (uuid 0394f988-8b78-4472-a48a-b9189a858164)
+  )
+  (wire (pts (xy 132.08 120.65) (xy 132.08 127))
+    (stroke (width 0) (type default))
+    (uuid 090517e2-2fad-4c96-a772-71a61bdddc11)
   )
   (wire (pts (xy 243.84 124.46) (xy 254 124.46))
     (stroke (width 0) (type default))
@@ -1106,13 +1164,17 @@
     (stroke (width 0) (type default))
     (uuid 65fe5592-375f-4c5b-8768-70ff89d63a24)
   )
-  (wire (pts (xy 144.78 127) (xy 127 127))
+  (wire (pts (xy 144.78 127) (xy 132.08 127))
     (stroke (width 0) (type default))
     (uuid 6651c98f-8295-4c4d-bcab-4e8b98c514c9)
   )
   (wire (pts (xy 243.84 134.62) (xy 254 134.62))
     (stroke (width 0) (type default))
     (uuid 68f230b6-72d5-40dd-90e7-1687d3baabf2)
+  )
+  (wire (pts (xy 132.08 127) (xy 127 127))
+    (stroke (width 0) (type default))
+    (uuid 6b80706e-7c7b-465e-9364-ed5ce9ae2a48)
   )
   (wire (pts (xy 165.1 165.1) (xy 165.1 175.26))
     (stroke (width 0) (type default))
@@ -1201,6 +1263,10 @@
   (wire (pts (xy 99.06 160.02) (xy 99.06 161.29))
     (stroke (width 0) (type default))
     (uuid 9ce9fb03-ff98-444a-b768-2f43eb343423)
+  )
+  (wire (pts (xy 132.08 110.49) (xy 132.08 113.03))
+    (stroke (width 0) (type default))
+    (uuid 9f2e298f-7e34-444f-bebb-b9e604f0f291)
   )
   (wire (pts (xy 180.34 106.68) (xy 180.34 109.22))
     (stroke (width 0) (type default))
@@ -1343,7 +1409,7 @@
   (symbol (lib_id "power:GND") (at 203.2 124.46 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 02378ed3-141a-45a8-83c5-6c0e8c1deac3)
-    (property "Reference" "#PWR015" (at 209.55 124.46 0)
+    (property "Reference" "#PWR016" (at 209.55 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 207.01 124.46 90)
@@ -1359,7 +1425,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1415,10 +1481,36 @@
     )
   )
 
+  (symbol (lib_id "Device:C_Small") (at 115.57 110.49 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 13c76c7e-6d54-492e-844d-b5d2214c70a0)
+    (property "Reference" "C4" (at 115.5763 104.14 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "3.3nH" (at 115.5763 106.68 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 115.57 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 115.57 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1e136cbc-9571-4519-b1fb-d349766a4e74))
+    (pin "2" (uuid c630dd1f-30df-4ecc-8c78-b21dcce2783f))
+    (instances
+      (project "AP6212_SD_WiFi_Module"
+        (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
+          (reference "C4") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 185.42 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 18691571-24dc-49b2-a30b-df1a8f533af6)
-    (property "Reference" "C6" (at 189.23 170.18 0)
+    (property "Reference" "C9" (at 189.23 170.18 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uF" (at 189.23 172.72 0)
@@ -1435,7 +1527,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "C6") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -1444,7 +1536,7 @@
   (symbol (lib_id "power:VCC") (at 147.32 171.45 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1bc66ffc-6e73-4182-bbb2-485a5955326d)
-    (property "Reference" "#PWR08" (at 151.13 171.45 0)
+    (property "Reference" "#PWR09" (at 151.13 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 143.51 171.45 90)
@@ -1460,7 +1552,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1469,7 +1561,7 @@
   (symbol (lib_id "power:VCC") (at 243.84 134.62 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 26c3585b-612b-41e9-8ef2-4bcd86827884)
-    (property "Reference" "#PWR019" (at 247.65 134.62 0)
+    (property "Reference" "#PWR020" (at 247.65 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 240.03 134.62 90)
@@ -1485,7 +1577,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -1595,7 +1687,7 @@
   (symbol (lib_id "power:GND") (at 182.88 205.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 38e93483-bb93-43ef-9fc5-2fc175cefb13)
-    (property "Reference" "#PWR012" (at 182.88 212.09 0)
+    (property "Reference" "#PWR013" (at 182.88 212.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 182.88 210.82 0)
@@ -1611,33 +1703,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR012") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:L_Small") (at 115.57 110.49 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 3f37474d-ab4e-4975-b491-ea39ddc89648)
-    (property "Reference" "L3" (at 115.57 105.41 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "3.3nH" (at 115.57 107.95 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Inductor_SMD:L_0402_1005Metric" (at 115.57 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 115.57 110.49 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9f48c14b-2066-43e0-ac8a-f9bb18acf6d8))
-    (pin "2" (uuid 5d4b5885-93fb-49ea-9c2f-c74d0ebb1c82))
-    (instances
-      (project "AP6212_SD_WiFi_Module"
-        (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "L3") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1796,7 +1862,7 @@
   (symbol (lib_id "power:VCC") (at 140.97 143.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 54c8a826-43c5-4d01-899b-ff43f8f0475b)
-    (property "Reference" "#PWR05" (at 140.97 147.32 0)
+    (property "Reference" "#PWR06" (at 140.97 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 140.97 138.43 0)
@@ -1812,7 +1878,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -1879,7 +1945,7 @@
   (symbol (lib_id "power:VCC") (at 186.69 166.37 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6f6336df-ac4f-4ecf-a4f1-78b89a19f085)
-    (property "Reference" "#PWR014" (at 182.88 166.37 0)
+    (property "Reference" "#PWR015" (at 182.88 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 190.5 166.37 90)
@@ -1895,7 +1961,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -1904,7 +1970,7 @@
   (symbol (lib_id "power:GND") (at 185.42 177.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 704437e2-c6ad-4440-9be5-3d4397e9c1f5)
-    (property "Reference" "#PWR013" (at 185.42 184.15 0)
+    (property "Reference" "#PWR014" (at 185.42 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 185.42 182.88 0)
@@ -1920,7 +1986,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -1929,7 +1995,7 @@
   (symbol (lib_id "power:GND") (at 142.24 124.46 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 733a3c5e-adfd-4709-8452-b52aa21c3949)
-    (property "Reference" "#PWR06" (at 135.89 124.46 0)
+    (property "Reference" "#PWR07" (at 135.89 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 138.43 124.46 90)
@@ -1945,7 +2011,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1954,7 +2020,7 @@
   (symbol (lib_id "Device:C") (at 160.02 181.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7927acd8-8f27-4fee-90d1-abb1a0ad0868)
-    (property "Reference" "C4" (at 163.83 180.34 0)
+    (property "Reference" "C7" (at 163.83 180.34 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100uF" (at 163.83 182.88 0)
@@ -1971,7 +2037,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "C4") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -1980,7 +2046,7 @@
   (symbol (lib_id "power:GND") (at 142.24 129.54 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 87a3cb5c-3421-431a-9b49-5049361485f4)
-    (property "Reference" "#PWR07" (at 135.89 129.54 0)
+    (property "Reference" "#PWR08" (at 135.89 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 138.43 129.54 90)
@@ -1996,7 +2062,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -2057,7 +2123,7 @@
   (symbol (lib_id "Device:C") (at 182.88 199.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f0a92f2-f07e-4467-8ded-5c15c9a1d5b6)
-    (property "Reference" "C5" (at 186.69 198.12 0)
+    (property "Reference" "C8" (at 186.69 198.12 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uF" (at 186.69 200.66 0)
@@ -2074,7 +2140,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "C5") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -2083,7 +2149,7 @@
   (symbol (lib_id "power:GND") (at 180.34 167.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a31ead51-97c0-40ce-a4b1-158bb81a2104)
-    (property "Reference" "#PWR011" (at 180.34 173.99 0)
+    (property "Reference" "#PWR012" (at 180.34 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 180.34 172.72 0)
@@ -2099,7 +2165,33 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C_Small") (at 115.57 97.79 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a6efc658-e3f6-4fc0-9cf3-fa87ac0935f0)
+    (property "Reference" "C3" (at 115.5763 91.44 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "3.3nH" (at 115.5763 93.98 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 115.57 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 115.57 97.79 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 340269a7-70f8-41a5-9047-bd9e9396f0f0))
+    (pin "2" (uuid 0f36654a-79d4-4560-9fa2-37874c689e22))
+    (instances
+      (project "AP6212_SD_WiFi_Module"
+        (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -2133,7 +2225,7 @@
   (symbol (lib_id "power:VCC") (at 213.36 60.96 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ab8ea41a-791a-4b41-85ef-92db4f1cfabf)
-    (property "Reference" "#PWR016" (at 213.36 57.15 0)
+    (property "Reference" "#PWR017" (at 213.36 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 213.36 66.04 0)
@@ -2149,7 +2241,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -2158,7 +2250,7 @@
   (symbol (lib_id "power:GND") (at 180.34 106.68 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b7b7bdcd-9153-45e4-a42b-4cbc119f1cf3)
-    (property "Reference" "#PWR010" (at 180.34 100.33 0)
+    (property "Reference" "#PWR011" (at 180.34 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 180.34 101.6 0)
@@ -2174,7 +2266,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -2208,7 +2300,7 @@
   (symbol (lib_id "power:GND") (at 228.6 60.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c011de28-f78e-4717-b9ea-209724abb721)
-    (property "Reference" "#PWR017" (at 228.6 67.31 0)
+    (property "Reference" "#PWR018" (at 228.6 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 228.6 66.04 0)
@@ -2224,7 +2316,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -2259,7 +2351,7 @@
   (symbol (lib_id "Device:C") (at 134.62 144.78 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cb5a742e-6be0-4dba-99a5-46fa68762f4d)
-    (property "Reference" "C3" (at 134.62 138.43 90)
+    (property "Reference" "C6" (at 134.62 138.43 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10uF" (at 134.62 140.97 90)
@@ -2276,7 +2368,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "C3") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -2285,7 +2377,7 @@
   (symbol (lib_id "power:GND") (at 160.02 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d137b20b-f9fb-46af-b0bd-9ff8fcda817a)
-    (property "Reference" "#PWR09" (at 160.02 194.31 0)
+    (property "Reference" "#PWR010" (at 160.02 194.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 193.04 0)
@@ -2301,7 +2393,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -2332,36 +2424,10 @@
     )
   )
 
-  (symbol (lib_id "Device:L_Small") (at 115.57 97.79 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d4ac7cef-246b-40d6-9ac6-e4337607ebb8)
-    (property "Reference" "L2" (at 115.57 92.71 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "3.3nH" (at 115.57 95.25 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Inductor_SMD:L_0402_1005Metric" (at 115.57 97.79 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 115.57 97.79 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 829268d0-514e-4108-8cfd-70674a122767))
-    (pin "2" (uuid fb55fcc9-5434-46b3-aaa4-f76f72435e07))
-    (instances
-      (project "AP6212_SD_WiFi_Module"
-        (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "L2") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 243.84 129.54 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d6a2ffa8-2e7c-4a2f-8236-09f99ceef552)
-    (property "Reference" "#PWR018" (at 237.49 129.54 0)
+    (property "Reference" "#PWR019" (at 237.49 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 240.03 129.54 90)
@@ -2377,7 +2443,7 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -2408,10 +2474,35 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 132.08 110.49 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid e8c91a57-2687-4bbb-8395-1acea59713a5)
+    (property "Reference" "#PWR05" (at 132.08 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 132.08 105.41 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 132.08 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 132.08 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 08c96d71-b948-4185-82b9-730db385374c))
+    (instances
+      (project "AP6212_SD_WiFi_Module"
+        (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:L") (at 182.88 189.23 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f1a0ad18-9466-4a4b-8ebc-bd707e14d4d2)
-    (property "Reference" "L4" (at 184.15 187.96 0)
+    (property "Reference" "L2" (at 184.15 187.96 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7uH" (at 184.15 190.5 0)
@@ -2428,7 +2519,33 @@
     (instances
       (project "AP6212_SD_WiFi_Module"
         (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
-          (reference "L4") (unit 1)
+          (reference "L2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 132.08 116.84 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f5422efa-713c-47a4-8a6a-ee9ad93c3b19)
+    (property "Reference" "C5" (at 135.89 115.57 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "DNP" (at 135.89 118.11 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 133.0452 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 132.08 116.84 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8313eb4d-83e0-48e9-85a3-ea2495e3ce5a))
+    (pin "2" (uuid 9201d7f5-f0fc-4bca-8cc3-8a05711bce02))
+    (instances
+      (project "AP6212_SD_WiFi_Module"
+        (path "/b65838ac-496f-4a8d-9112-1df66a66b3df"
+          (reference "C5") (unit 1)
         )
       )
     )
