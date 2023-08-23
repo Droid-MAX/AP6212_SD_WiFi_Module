@@ -21,7 +21,7 @@
       (effects (font (size 0.8 0.8) (thickness 0.1)) (justify left))
     (tstamp 4c472921-2680-4fff-8137-b9bb9f83e10e)
   )
-  (fp_text user "DTA0" (at -2.75 -2.685 90) (layer "F.SilkS")
+  (fp_text user "DAT0" (at -2.75 -2.685 90) (layer "F.SilkS")
       (effects (font (size 0.8 0.8) (thickness 0.1)) (justify left))
     (tstamp 4dc1d775-1ae7-49bf-91a6-1c82a57e8dbb)
   )
