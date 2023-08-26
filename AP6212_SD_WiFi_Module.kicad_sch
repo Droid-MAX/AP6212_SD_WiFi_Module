@@ -2508,7 +2508,7 @@
     (property "Value" "4.7uH" (at 184.15 190.5 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Custom_Libs:IND-SMD_L2.5-W2.0_VLS2520X" (at 182.88 189.23 0)
+    (property "Footprint" "Custom_Libs:IND-SMD_L2.5-W2.0" (at 182.88 189.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 182.88 189.23 0)
