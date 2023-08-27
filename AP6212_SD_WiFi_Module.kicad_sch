@@ -2023,7 +2023,7 @@
     (property "Reference" "C7" (at 163.83 180.34 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100uF" (at 163.83 182.88 0)
+    (property "Value" "0.1uF" (at 163.83 182.88 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 160.9852 185.42 0)
